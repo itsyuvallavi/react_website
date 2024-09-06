@@ -1,0 +1,169 @@
+*{
+  font-family: "carme", sans-serif;
+}
+
+
+.plug-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 110vh;
+  background: #ccc;
+  color: #1a1a1a;
+  gap: 2em;
+}
+
+.container-plug-in {
+  position: relative;
+  margin: 0;
+  padding: 2em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* Ensure both containers have the same background color */
+  background: none;
+}
+
+.plug-in-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 0;
+  margin: 4em 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Container shadow */
+  border: 5px solid transparent; /* Initial border setting */
+  transition: border-width 0.6s linear, border-color 0.6s linear, opacity 0.6s;
+}
+
+.container-plug-in img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 20px 40px rgba(0, 0, 0, 0.2),
+    0 25px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 20px 20px 0px 0px;
+  background: none;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%; /* Matches the width of the top container */
+  border-radius: 20px; /* Matches the border-radius of the top container */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Same box-shadow as the top container */
+  align-items: stretch; /* Ensures children take up the full height */
+  transition: all 0.3s ease;
+
+}
+
+.description-container {
+  flex: 2; /* Takes up more space for the text */
+  padding: 0;
+  text-align: left; /* Aligns text to the left */
+  color: #333;
+  border: black solid 1px;
+  transition: all 0.5s ease;
+
+}
+
+.purchase-container {
+  flex: 1; /* Takes up less space than the description */
+  text-align: center;
+  display: flex; /* Ensure flexbox layout */
+  flex-direction: column; /* Ensure items are stacked vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  padding-top: 1em; /* Add padding for better alignment */
+}
+
+.purchase-container h3 {
+  /* text-decoration: line-through; */
+  color: #ff6347;
+  font-size: 1.2em; /* Keeps the original price smaller */
+}
+
+.description-container p {
+  font-size: 13px;
+  text-align: justify;
+  letter-spacing: 2.5px;
+  line-height: 1.7;
+  padding: 0;
+  margin: 2em;
+}
+
+
+
+/* Hover Effect */
+
+.fadein {
+  transition: border 0.5s ease, border-radius 0.3s ease, box-shadow 0.7s ease;
+}
+
+.fadein:hover {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  animation-name: example;
+  animation-duration: 0.3s;
+  border: 3px solid #ff6347;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+@keyframes example {
+  0%   {border: 1.5px solid #ffd1d1;}
+  25%  {border: 2px solid #fdafaf;}
+  50%  {border: 2.5px solid #ff8080;}
+  100% {border: 3px solid #ff6347;}
+}
+
+.container-plug-in .image-transition {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 3s ease, transform 2s ease;
+  }
+  
+  .container-plug-in .visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+ 
+/* Button Effect */
+
+.purchase-container button {
+  font-family: "Carme", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8em 2em;
+  width: auto; /* Allows the button to resize based on text */
+  background-color: #ff6347;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-container button:hover {
+  background-color: #e5533d; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.purchase-container button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 4px rgba(255, 99, 71, 0.4);
+}
+
+.purchase-container button:active {
+  background-color: #cc4832;
+  transform: translateY(1px); /* Pressed effect */
+}

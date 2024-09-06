@@ -1,0 +1,135 @@
+/* ----------------- Header and Navbar Styles ----------------- */
+
+header {
+  height: 100vh;
+  background: linear-gradient(
+      0deg,
+      rgba(26, 26, 26, 1) 0%,
+      rgba(26, 26, 26, 0.8) 40%
+    ),
+    url(../images/dan-otis-OYFHT4X5isg-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+nav {
+  z-index: 99;
+  position: relative;
+  background-color: transparent;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 70%;
+  padding: 2em 0;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2em;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul a {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul a:hover {
+  color: #ccc;
+}
+
+/* Social Media Icons */
+.social-media {
+  display: flex;
+  gap: 1em;
+}
+
+.social-media a {
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-media a:hover {
+  color: #ccc;
+}
+
+/* Menu Button */
+.menu-btn {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem; /* Move to the right side of the screen */
+  color: #fff;
+  width: 2.8em;
+  height: 2.8em;
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: 1.5em;
+}
+
+
+/* Hide the menu by default in mobile view */
+nav .menu {
+  flex-direction: row;
+  transition: height 0.5s ease;
+}
+
+/* When the nav is toggled open */
+nav.nav-toggle .menu {
+  position: absolute; /* Overlay the content */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh; /* Full-screen height */
+  background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  justify-content: center; /* Center the items vertically */
+}
+
+nav.nav-toggle ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+nav.nav-toggle ul a {
+  font-size: 1.2em; /* Increase size for better visibility */
+  color: #fff;
+}
+
+/* Mobile Styles for the Menu */
+@media screen and (max-width: 1000px) {
+  nav ul {
+    display: none; /* Hide menu items by default */
+  }
+
+  nav .menu-btn {
+    display: block; /* Show the menu button */
+  }
+
+
+  /* Hide social media icons when the menu is open on small screens */
+  .social-media {
+    display: none !important;
+  }
+}

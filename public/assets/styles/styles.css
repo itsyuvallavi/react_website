@@ -1,0 +1,283 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "carme", sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* ------------------Projects----------------------- */
+
+/*--------------------Kontakt---------------------*/
+
+/*-------------------------Music Playlist------------------------*/
+
+/*--------------------Media Query------------------*/
+
+@media screen and (max-width: 1600px) {
+  .about-row {
+    display: flex;
+    flex-direction: row; /* Stack items vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+    padding: 2em 1em; /* Adjust padding for smaller screens */
+    margin-top: 5em;
+  }
+
+  .about-row img {
+    width: 80%; /* Make the image full width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 25em; /* Maintain a reasonable maximum width */
+  }
+
+  .about-img{
+    margin: 0;
+  }
+
+  .about-text {
+    max-width: 100%; /* Make text container full width */
+    margin-bottom: 3em; /* Ensure space below the text */
+  }
+
+  .posts {
+    padding: 10em 0em;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1300px) {
+
+
+  .about-row {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+    padding: 2em 1em; /* Adjust padding for smaller screens */
+    margin-top: 5em;
+  }
+
+
+  nav .menu {
+    gap: 16em;
+  }
+
+  .album-gallery{
+    margin-top: 20em;
+  }
+
+  .post img {
+    
+    width: 100%; /* Make the images responsive */
+    height: auto;
+  }
+
+
+}
+
+@media screen and (max-width: 1000px) {
+  nav .container {
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+  }
+
+  nav .container > div {
+    grid-template-columns: 1fr;
+  }
+
+  nav .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 0;
+    overflow: hidden;
+    transition: 0.7s ease;
+  }
+
+  nav ul:nth-child(1) li {
+    display: block;
+    margin: 0.5em 0;
+  }
+
+  nav ul:nth-child(1) li:nth-child(1) {
+    margin-top: 1.5em;
+  }
+
+  nav ul:nth-child(2) li:nth-child(1) {
+    margin-left: 0;
+  }
+
+  nav .container .menu-btn {
+    display: inline-block;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+
+  nav .container .nav-toggle {
+    height: 10em;
+    overflow: visible;
+  }
+
+  .posts {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    height: auto;
+  }
+
+  .post {
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .post img {
+    max-width: 100%; /* Full width image for smaller screens */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .container-row {
+    display: flex;
+    flex-direction: column;
+    width: 80%; /* Make container responsive */
+    max-width: 100%; /* Ensure it doesn't exceed the parent's width */
+  }
+
+  .container-row .demo,
+  .container-row .sale {
+    width: 63%;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .projects .overlay h1 {
+    font-size: 4em;
+  }
+
+  .row img {
+    width: 30em;
+  }
+
+  .posts {
+    margin: 3em 3em;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .row {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .row img {
+    width: 100%;
+  }
+
+  .post.album:hover img {
+    transform: scale(1);
+  }
+
+  .post.album-info {
+    opacity: 1;
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+  header,
+  .projects {
+    font-size: 14px;
+  }
+  .post.album {
+    position: relative;
+    width: 250px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  header,
+  .projects {
+    font-size: 14px;
+  }
+  .post.album {
+    position: relative;
+    width: 160px;
+    height: 120px;
+  }
+}
+
+/*--------------------Custom Shape---------------------*/
+
+.shape {
+  padding-top: 0rem;
+  margin: 0;
+  position: relative;
+}
+.custom-shape-divider-bottom-1722766256 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1722766256 svg {
+  position: relative;
+  display: block;
+  width: calc(121% + 1.3px);
+  height: 105px;
+}
+
+.custom-shape-divider-bottom-1722766256 .shape-fill {
+  fill: #cccccc;
+}
+
+/* -------------WAVE FORM------------------------- */
+
+#waveform {
+  width: 100%;
+}
+
+.buttons .btn {
+  padding: 14px;
+  width: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.buttons .play-btn .fa-pause {
+  display: none;
+}
+
+.buttons .mute-btn .fa-volume-mute {
+  display: none;
+}
+
+.sale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sale h3 {
+  text-decoration-line: line-through;
+  margin: 0;
+}

@@ -67,14 +67,14 @@
 }
 
 @media screen and (max-width: 630px) {
+
+
   .about-row img {
     margin: 0em;
     width: 25em !important;
   }
 
-  .about-row {
-    padding: 0;
-  }
+
 
   .posts {
     padding: 0;

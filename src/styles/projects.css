@@ -113,3 +113,10 @@
   padding: 48px 20px;
 }
 }
+
+@media screen and (max-width: 550px) {
+  .post.album {
+    width: 90%;
+    height: 150px;
+  }
+}

@@ -124,6 +124,14 @@ nav.nav-toggle ul a {
     height:auto;
   }
 
+  nav .menu {
+    gap: 8em;
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
   nav ul {
     display: none; /* Hide menu items by default */
   }

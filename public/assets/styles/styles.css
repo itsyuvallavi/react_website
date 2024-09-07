@@ -202,11 +202,7 @@ body {
   .projects {
     font-size: 14px;
   }
-  .post.album {
-    position: relative;
-    width: 250px;
-    height: 200px;
-  }
+
 }
 
 @media screen and (max-width: 680px) {
@@ -222,16 +218,7 @@ body {
 }
 
 
-@media screen and (max-width: 630px) {
 
-
-  .about-row img {
-    margin: 0em;
-    width: 10em !important;
-  }
-
-
-}
 
 
 

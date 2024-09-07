@@ -66,9 +66,7 @@ body {
     gap: 16em;
   }
 
-  .album-gallery{
-    margin-top: 20em;
-  }
+ 
 
   .post img {
     
@@ -222,6 +220,20 @@ body {
     height: 120px;
   }
 }
+
+
+@media screen and (max-width: 630px) {
+
+
+  .about-row img {
+    margin: 0em;
+    width: 10em !important;
+  }
+
+
+}
+
+
 
 /*--------------------Custom Shape---------------------*/
 

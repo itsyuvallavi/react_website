@@ -118,7 +118,12 @@ nav.nav-toggle ul a {
 }
 
 /* Mobile Styles for the Menu */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 13000px) {
+
+  header{
+    height:auto;
+  }
+
   nav ul {
     display: none; /* Hide menu items by default */
   }

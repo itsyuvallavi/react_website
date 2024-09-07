@@ -1,7 +1,6 @@
-*{
+* {
   font-family: "carme", sans-serif;
 }
-
 
 .plug-in {
   display: flex;
@@ -62,7 +61,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Same box-shadow as the top container */
   align-items: stretch; /* Ensures children take up the full height */
   transition: all 0.3s ease;
-
 }
 
 .description-container {
@@ -72,7 +70,6 @@
   color: #333;
   border: black solid 1px;
   transition: all 0.5s ease;
-
 }
 
 .purchase-container {
@@ -100,8 +97,6 @@
   margin: 2em;
 }
 
-
-
 /* Hover Effect */
 
 .fadein {
@@ -114,27 +109,35 @@
   animation-name: example;
   animation-duration: 0.3s;
   border: 3px solid #ff6347;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 @keyframes example {
-  0%   {border: 1.5px solid #ffd1d1;}
-  25%  {border: 2px solid #fdafaf;}
-  50%  {border: 2.5px solid #ff8080;}
-  100% {border: 3px solid #ff6347;}
+  0% {
+    border: 1.5px solid #ffd1d1;
+  }
+  25% {
+    border: 2px solid #fdafaf;
+  }
+  50% {
+    border: 2.5px solid #ff8080;
+  }
+  100% {
+    border: 3px solid #ff6347;
+  }
 }
 
 .container-plug-in .image-transition {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 3s ease, transform 2s ease;
-  }
-  
-  .container-plug-in .visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
- 
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 3s ease, transform 2s ease;
+}
+
+.container-plug-in .visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 /* Button Effect */
 
 .purchase-container button {
@@ -166,4 +169,21 @@
 .purchase-container button:active {
   background-color: #cc4832;
   transform: translateY(1px); /* Pressed effect */
+}
+
+
+@media screen and (max-width: 1000px) {
+  .container-plug-in{
+    width: 80%;
+  }
+}
+
+
+
+@media screen and (max-width: 630px) {
+  .plug-in {
+    height: auto;
+    padding-bottom: 3em;
+  }
+
 }

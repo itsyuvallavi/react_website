@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import projectsData from '../data/projectsData';
-import MusicPlayer from './MusicPlayer';
-import '../styles/projects.css';
+import React, { useState, useEffect } from "react";
+import projectsData from "../data/projectsData";
+import MusicPlayer from "./MusicPlayer";
+import SlideInEffect from "../hooks/SlideInEffect";
+import "../styles/projects.css";
 
 const Projects = () => {
   const [selectedTracks, setSelectedTracks] = useState(() => {
-    const saved = localStorage.getItem('selectedTracks');
+    const saved = localStorage.getItem("selectedTracks");
     return saved ? JSON.parse(saved) : [];
   });
   const [isPlayerVisible, setIsPlayerVisible] = useState(() => {
-    return localStorage.getItem('isPlayerVisible') === 'true';
+    return localStorage.getItem("isPlayerVisible") === "true";
   });
   const [currentTrackIndex, setCurrentTrackIndex] = useState(() => {
-    return parseInt(localStorage.getItem('currentTrackIndex') || '0', 10);
+    return parseInt(localStorage.getItem("currentTrackIndex") || "0", 10);
   });
 
   useEffect(() => {
-    localStorage.setItem('selectedTracks', JSON.stringify(selectedTracks));
-    localStorage.setItem('isPlayerVisible', isPlayerVisible);
-    localStorage.setItem('currentTrackIndex', currentTrackIndex.toString());
+    localStorage.setItem("selectedTracks", JSON.stringify(selectedTracks));
+    localStorage.setItem("isPlayerVisible", isPlayerVisible);
+    localStorage.setItem("currentTrackIndex", currentTrackIndex.toString());
   }, [selectedTracks, isPlayerVisible, currentTrackIndex]);
 
   const handleAlbumClick = (tracks) => {
-    console.log("Album clicked, tracks:", tracks);
     setSelectedTracks(tracks);
     setCurrentTrackIndex(0);
     setIsPlayerVisible(true);
@@ -32,13 +32,15 @@ const Projects = () => {
     setIsPlayerVisible(false);
   };
 
+  {console.log("Projects Data:", projectsData)}
+
   return (
     <section className="posts" id="projects">
-      <div className="row album-gallery">
+      <div className="album-gallery row">
         {projectsData.map((project, index) => (
-          <div 
-            key={index} 
-            className="post album"
+          <div
+            key={index}
+            className="post album slide-in"
             onClick={() => handleAlbumClick(project.tracks)}
           >
             <img src={project.image} alt={project.album} />
@@ -49,12 +51,13 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <MusicPlayer 
+      <MusicPlayer
         tracks={selectedTracks}
         initialTrackIndex={currentTrackIndex}
         isVisible={isPlayerVisible}
         onClose={handleClosePlayer}
       />
+      <SlideInEffect />
     </section>
   );
 };

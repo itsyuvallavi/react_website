@@ -53,18 +53,20 @@
   color: #ff6347;
 }
 
-@media screen and (max-width: 1300px) {
-  .about-text {
-    max-width: 100% !important;
+
+
+@media screen and (max-width: 800px) {
+
+  .about-row{
+    padding:0 0 !important;
   }
-  .header {
-    height: auto;
-  }
+  
   .about-text {
-    margin: 0;
+    max-width: 100%; /* Constrain text width */
+  }
+  
   }
 
-}
 
 @media screen and (max-width: 630px) {
 

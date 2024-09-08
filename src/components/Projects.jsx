@@ -32,8 +32,6 @@ const Projects = () => {
     setIsPlayerVisible(false);
   };
 
-  {console.log("Projects Data:", projectsData)}
-
   return (
     <section className="posts" id="projects">
       <div className="album-gallery row">

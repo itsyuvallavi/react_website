@@ -112,13 +112,33 @@
   padding: 0;
 }
 .posts{
-  padding: 48px 20px;
+  padding: 4px 0px;
 }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
   .post.album {
-    width: 90%;
+    width:  100%;
+    height: 200px;
+    width: 300px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .post.album {
+    width:  100%;
     height: 150px;
+    width: 250px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .post.album {
+    width:  100%;
+    height: 120px;
+    width: 200px;
+    padding: 0;
   }
 }

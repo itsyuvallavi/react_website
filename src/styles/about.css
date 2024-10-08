@@ -22,7 +22,8 @@
 .about-row img {
   flex: 1; /* Image takes up one part */
   width: 35em; /* Maintain minimum width */
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.25) 0px 10px 10px; /* Combined box-shadow */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.25) 0px 10px 10px; /* Combined box-shadow */
   display: block; /* Ensure the image is a block element */
   margin: 0 auto; /* Center the image inside its flex item */
 }
@@ -49,35 +50,32 @@
   text-align: justify;
 }
 
-.highlight{
+.highlight {
   color: #ff6347;
 }
 
-
-
-@media screen and (max-width: 800px) {
-
-  .about-row{
-    padding:0 0 !important;
+@media screen and (max-width: 1200px) {
+  .about-row {
+    padding: 0 0 !important;
   }
-  
+
   .about-text {
     max-width: 100%; /* Constrain text width */
   }
-  
-  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-row {
+    max-width: 80%;  }
+
+}
 
 
 @media screen and (max-width: 630px) {
-
-
   .about-row img {
     margin: 0em;
     width: 25em !important;
   }
-
-
-
   .posts {
     padding: 0;
   }

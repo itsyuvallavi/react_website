@@ -131,7 +131,7 @@ nav.nav-toggle ul a {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   nav ul {
     display: none; /* Hide menu items by default */
   }

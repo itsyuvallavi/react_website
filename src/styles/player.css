@@ -81,6 +81,7 @@
 
 
 .player-bar-content {
+    color: #ccb;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -90,6 +91,7 @@
 
 /* Track Info */
 .track-info h2 {
+    color: #ccb;
     font-size: 0.9rem; /* Reduce font size for more space */
     font-weight: 400;
     margin: 0;
@@ -107,7 +109,7 @@
 .controls button {
     background: none;
     border: none;
-    color: #fff;
+    color: #ccb;
     font-size: 1.2rem;
     cursor: pointer;
     transition: transform 0.2s ease, color 0.3s ease;
@@ -122,7 +124,7 @@
 .close-button {
     background: none;
     border: none;
-    color: #fff;
+    color: #ccb;
     font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.2s ease, color 0.3s ease;

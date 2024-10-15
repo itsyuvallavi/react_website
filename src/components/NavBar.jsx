@@ -33,13 +33,10 @@ const NavBar = () => {
               <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
               <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="#listen">Listen</a>
+              <a href="#plugin">Audio Plug-ins</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
@@ -50,14 +47,14 @@ const NavBar = () => {
               <button
                 onClick={handleLoginClick}
                 style={{
-                  color: '#ff6347',
-                  cursor: 'pointer',
-                  background: 'none',
-                  border: 'none',
-                  padding: '0',
-                  margin: '0',
-                  fontSize: 'inherit',
-                  fontFamily: 'inherit'
+                  color: "#ff6347",
+                  cursor: "pointer",
+                  background: "none",
+                  border: "none",
+                  padding: "0",
+                  margin: "0",
+                  fontSize: "inherit",
+                  fontFamily: "inherit",
                 }}
               >
                 Login

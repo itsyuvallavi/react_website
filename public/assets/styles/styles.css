@@ -11,14 +11,6 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* ------------------Projects----------------------- */
-
-/*--------------------Kontakt---------------------*/
-
-/*-------------------------Music Playlist------------------------*/
-
-/*--------------------Media Query------------------*/
-
 @media screen and (max-width: 1600px) {
   .about-row {
     display: flex;

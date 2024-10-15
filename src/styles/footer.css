@@ -14,9 +14,6 @@ footer {
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 1em 2em;
     border-top: 1px solid #444;
 }
@@ -28,7 +25,7 @@ footer {
 
 .footer-bottom ul {
     list-style-type: none;
-    padding: 0;
+    padding: 2em 0 1em 0;
     margin: 0;
     display: flex;
     gap: 2em;
@@ -46,7 +43,7 @@ footer {
 }
 
 .footer-bottom a:hover {
-    color: #00aaff;
+    color: #ff7f50;
 }
 
 .footer-bottom p {

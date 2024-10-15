@@ -14,7 +14,7 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  color: #fff;
+  color: #ccb;;
 }
 
 nav {
@@ -46,13 +46,13 @@ nav ul li {
 nav ul a {
   font-size: 0.8em;
   text-transform: uppercase;
-  color: #fff;
+  color: #ccb;;
   text-decoration: none;
   transition: 0.3s;
 }
 
 nav ul a:hover {
-  color: #ccc;
+  color: #e57373;
 }
 
 /* Social Media Icons */
@@ -63,13 +63,13 @@ nav ul a:hover {
 
 .social-media a {
   font-size: 1em;
-  color: #fff;
+  color: #ccb;;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .social-media a:hover {
-  color: #ccc;
+  color: #e57373;
 }
 
 /* Menu Button */

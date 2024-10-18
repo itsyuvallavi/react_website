@@ -1,13 +1,17 @@
 .plug-in {
+  position: relative;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: #ccc;
   padding: 2em;
+  background-color: rgba(240, 240, 240, 0.9); /* Light gray with some transparency */
+  overflow: hidden; /* Ensure the background stays within this section */
 }
 
 .plugin-container {
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
   display: flex;
   justify-content: center;
   gap: 2em;
@@ -16,7 +20,7 @@
 }
 
 .container-plug-in {
-  background: #1a1a1a;
+  background-color: rgba(26, 26, 26, 0.9); /* Slightly transparent dark background */
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   width: 700px;
@@ -24,6 +28,14 @@
   flex-direction: column;
   overflow: hidden;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(200px);
+}
+
+.container-plug-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .container-plug-in:hover {
@@ -57,7 +69,7 @@
 
 .description-container h2 {
   margin-bottom: 0.5em;
-  color: #ccc;
+  color: #ffffff; /* White text for better contrast */
   font-size: 1.6em;
   transition: color 0.3s ease;
 }
@@ -69,7 +81,7 @@
 .description-container p {
   font-size: 0.9em;
   line-height: 1.6;
-  color: #ccb;
+  color: #e0e0e0; /* Light gray text for better contrast */
   margin-bottom: 1em;
 }
 
@@ -109,7 +121,7 @@
 }
 
 .purchase-container button:hover::after {
-  animation:backwards 1s ease-out;
+  animation: ripple 1s ease-out;
 }
 
 @keyframes ripple {
@@ -127,10 +139,14 @@
   background-color: #e5533d;
 }
 
+
+
+
 @media screen and (max-width: 1440px) {
   .plugin-container {
     flex-direction: column;
     align-items: center;
+    padding-top: 10em;
   }
   
   .container-plug-in {
@@ -141,17 +157,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .plug-in{
+  .plug-in {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  
-
 }
 
 @media screen and (max-width: 600px) {
-
   .plug-in-img {
     height: 300px;
   }
@@ -162,13 +175,11 @@
   }
 }
 
-
 @media screen and (max-width: 450px) {
-  
-
   .plug-in-img {
-    height: 200px;
+    height: 250px;
   }
+  
   .plug-in-img img {
     height: 300px;
     object-fit: contain;

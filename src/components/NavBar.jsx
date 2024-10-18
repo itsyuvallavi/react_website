@@ -13,19 +13,19 @@ const NavBar = () => {
     setIsMenuOpen(false);
   };
 
-  const handleLoginClick = () => {
-    const password = prompt(
-      "Enter the secret password to access the private page:"
-    );
-    if (password === "password") {
-      // Replace with your desired password
-      localStorage.setItem("auth", true); // Store the authentication status
-      navigate("/private"); // Navigate to the secret page
-      closeMenu(); // Close the menu after navigation
-    } else {
-      alert("Incorrect password!");
-    }
-  };
+  // const handleLoginClick = () => {
+  //   const password = prompt(
+  //     "Enter the secret password to access the private page:"
+  //   );
+  //   if (password === "password") {
+  //     // Replace with your desired password
+  //     localStorage.setItem("auth", true); // Store the authentication status
+  //     navigate("/private"); // Navigate to the secret page
+  //     closeMenu(); // Close the menu after navigation
+  //   } else {
+  //     alert("Incorrect password!");
+  //   }
+  // };
 
   return (
     <nav className={isMenuOpen ? "nav-toggle" : ""}>
@@ -46,7 +46,7 @@ const NavBar = () => {
               <a href="#contact" onClick={closeMenu}>Contact</a>
             </li>
             {/* The login button for the secret page */}
-            <li>
+            {/* <li>
               <button
                 onClick={() => {
                   handleLoginClick();
@@ -65,7 +65,7 @@ const NavBar = () => {
               >
                 Login
               </button>
-            </li>
+            </li> */}
           </ul>
           {/* Social media icons */}
           <ul className="social-media">

@@ -47,7 +47,7 @@ const projectsData = [
   },
   {
     album: "En Paix",
-    style: "Upbeat, Energetic",
+    style: "Ambient, Eclectic",
     image: enPaixLogo,
     tracks: [
       {
@@ -59,7 +59,7 @@ const projectsData = [
   },
   {
     album: "The Fisherman's Wife",
-    style: "Upbeat, Energetic",
+    style: "Ambient, Ethnic",
     image: tfwLogo,
     tracks: [
       {
@@ -83,7 +83,7 @@ const projectsData = [
   },
   {
     album: "Zaguri Impreria",
-    style: "Sci-Fi, Western, Japanese-style",
+    style: "Electronic, Psytrance",
     image: ziLogo,
     tracks: [
       {
@@ -95,7 +95,7 @@ const projectsData = [
   },
   {
     album: "Limbo",
-    style: "Upbeat, Energetic",
+    style: "Ambient, Eclectic",
     image: limboLogo,
     tracks: [
       {
@@ -131,7 +131,7 @@ const projectsData = [
   },
   {
     album: "Last Night",
-    style: "Upbeat, Energetic",
+    style: "Drama, Orchestral",
     image: lnLogo,
     tracks: [
       {
@@ -155,7 +155,7 @@ const projectsData = [
   },
   {
     album: "Worms",
-    style: "Upbeat, Energetic",
+    style: "Tensive, Energetic",
     image: wormLogo,
     tracks: [
       {
@@ -167,7 +167,7 @@ const projectsData = [
   },
   {
     album: "Our Brotherly Love",
-    style: "Upbeat, Energetic",
+    style: "Upbeat, Hiphop",
     image: oblLogo,
     tracks: [
       {
@@ -179,7 +179,7 @@ const projectsData = [
   },
   {
     album: "Like Me",
-    style: "Upbeat, Rap",
+    style: "Upbeat, Hiphop",
     image: LMLogo,
     tracks: [
       {

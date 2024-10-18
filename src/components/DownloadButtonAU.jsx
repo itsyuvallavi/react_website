@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Modal from './Modal'; // Import the modal component
+import Modal from './Modal';
 
 function DownloadButtonAU() {
   const [email, setEmail] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-
-  const FILE_ID = "1dURjKq6-fvvp2ysBZZxBAUzlP0_LMMmS"; // This is your file ID
+  const FILE_ID = "1dURjKq6-fvvp2ysBZZxBAUzlP0_LMMmS"; // Updated file ID for AU
 
   const validateEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -16,32 +15,41 @@ function DownloadButtonAU() {
   };
 
   const handleDownloadClick = () => {
+    console.log('Download button clicked');
     setShowModal(true);
     setErrorMessage('');
   };
 
   const handleDownload = async () => {
+    console.log('Attempting download with email:', email);
     if (validateEmail(email)) {
       setIsProcessing(true);
       setErrorMessage('');
       try {
-        // Send email using EmailJS
+        console.log('Sending email via EmailJS');
         const emailResult = await emailjs.send(
-          "service_07qer3d", // Your EmailJS service ID
-          "template_ab98faq", // Replace with your correct template ID
+          "service_07qer3d",
+          "template_ab98faq",
           {
             user_email: email,
           },
-          "pBvBJnus_GURsn7yo" // Your EmailJS public key
+          "pBvBJnus_GURsn7yo"
         );
-
         console.log('Email sent successfully:', emailResult);
 
-        // Initiate direct download
+        // Create a temporary anchor element for download
         const downloadUrl = `https://drive.google.com/uc?export=download&id=${FILE_ID}`;
-        window.open(downloadUrl, '_blank');
+        console.log('Creating download link:', downloadUrl);
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.target = '_blank';
+        link.download = 'AUFile.extension'; // Replace with your actual file name and extension
+        document.body.appendChild(link);
+        console.log('Triggering download');
+        link.click();
+        document.body.removeChild(link);
 
-        alert('Email sent successfully. Your download should begin shortly in a new tab.');
+        alert('Email sent successfully. Your download should begin shortly.');
         setShowModal(false);
       } catch (error) {
         console.error('Error details:', error);
@@ -50,6 +58,7 @@ function DownloadButtonAU() {
         setIsProcessing(false);
       }
     } else {
+      console.log('Invalid email entered:', email);
       setErrorMessage('Please enter a valid email address.');
     }
   };
@@ -68,8 +77,8 @@ function DownloadButtonAU() {
           onChange={(e) => setEmail(e.target.value)}
           className="email-input"
         />
-        <button 
-          className="submit-btn" 
+        <button
+          className="submit-btn"
           onClick={handleDownload}
           disabled={isProcessing}
         >

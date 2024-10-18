@@ -2,7 +2,8 @@ import React from "react";
 import "../styles/plugin.css";
 import hangDreamImage from "../images/HangDream.png";
 import frozenReverbImage from "../images/FrozenReverb.png";
-import DownloadButton from './DownloadButton';
+import DownloadButtonVST from "./DownloadButtonVST";
+import DownloadButtonAU from "./DownloadButtonAU";
 
 function Plugin() {
   return (
@@ -25,7 +26,7 @@ function Plugin() {
             </p>
           </div>
           <div className="purchase-container">
-            <DownloadButton text="Download Now" />
+            <DownloadButtonVST text="Download Now" />
           </div>
         </div>
 
@@ -46,7 +47,7 @@ function Plugin() {
             </p>
           </div>
           <div className="purchase-container">
-            <DownloadButton text="Download Now" />
+            <DownloadButtonAU text="Download Now" />
           </div>
         </div>
       </div>

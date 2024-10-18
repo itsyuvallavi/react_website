@@ -9,15 +9,19 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const handleLoginClick = () => {
     const password = prompt(
       "Enter the secret password to access the private page:"
     );
-
     if (password === "password") {
       // Replace with your desired password
       localStorage.setItem("auth", true); // Store the authentication status
       navigate("/private"); // Navigate to the secret page
+      closeMenu(); // Close the menu after navigation
     } else {
       alert("Incorrect password!");
     }
@@ -30,22 +34,24 @@ const NavBar = () => {
         <div className={`menu ${isMenuOpen ? "nav-open" : ""}`}>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <a href="#home" onClick={closeMenu}>Home</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#projects" onClick={closeMenu}>Projects</a>
             </li>
             <li>
-              <a href="#plugin">Audio Plug-ins</a>
+              <a href="#plugin" onClick={closeMenu}>Audio Plug-ins</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={closeMenu}>Contact</a>
             </li>
-
             {/* The login button for the secret page */}
             <li>
               <button
-                onClick={handleLoginClick}
+                onClick={() => {
+                  handleLoginClick();
+                  closeMenu();
+                }}
                 style={{
                   color: "#ff6347",
                   cursor: "pointer",
@@ -61,7 +67,6 @@ const NavBar = () => {
               </button>
             </li>
           </ul>
-
           {/* Social media icons */}
           <ul className="social-media">
             <li>
@@ -69,6 +74,7 @@ const NavBar = () => {
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={closeMenu}
               >
                 <i className="fab fa-facebook-f"></i>
               </a>
@@ -78,6 +84,7 @@ const NavBar = () => {
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={closeMenu}
               >
                 <i className="fab fa-instagram"></i>
               </a>
@@ -87,6 +94,7 @@ const NavBar = () => {
                 href="https://www.twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={closeMenu}
               >
                 <i className="fab fa-twitter"></i>
               </a>
@@ -96,13 +104,13 @@ const NavBar = () => {
                 href="https://www.youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={closeMenu}
               >
                 <i className="fab fa-youtube"></i>
               </a>
             </li>
           </ul>
         </div>
-
         {/* Menu button */}
         <div className="menu-btn" onClick={toggleMenu}>
           <i className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"}`}></i>

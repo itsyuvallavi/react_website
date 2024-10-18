@@ -151,3 +151,12 @@
     padding: 0;
   }
 }
+
+@media screen and (max-width: 380px) {
+  .post.album {
+    width:  100%;
+    height: 80px;
+    width: 120px;
+    padding: 0;
+  }
+}

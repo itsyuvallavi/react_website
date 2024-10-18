@@ -1,41 +1,42 @@
-/* Modal styles (from the previous example) */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .modal-content {
-    background-color: white;
-    padding: 2em;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  }
-  
-  .close-btn {
-    margin-top: 1em;
-    background-color: #ff6347;
-    color: white;
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  
-  .close-btn:hover {
-    background-color: #e5533d;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's on top of everything */
+}
+
+.modal-content {
+  background-color: rgba(26, 26, 26, 0.9); /* Increased opacity for better readability */
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%; /* Adjusted for responsiveness */
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Rest of your CSS remains the same */
+.close-btn {
+  margin-top: 1em;
+  background-color: #ff6347;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.close-btn:hover {
+  background-color: #e5533d;
+}
+
   
   /* Improved email input styling */
   .email-input {
@@ -93,4 +94,9 @@
     padding: 0.7em 1.5em;
     border-radius: 25px;
     transition: all 0.3s ease;
+  }
+
+  #modal-root {
+    position: relative;
+    z-index: 9999;
   }

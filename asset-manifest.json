@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.9e09c599.css",
-    "main.js": "/static/js/main.42351dbb.js",
+    "main.js": "/static/js/main.2e158b4f.js",
     "static/media/TFW_Demo.wav": "/static/media/TFW_Demo.cbf1464b38ca8eb1eced.wav",
     "static/media/LastNight_Demo.wav": "/static/media/LastNight_Demo.5a476c76627d6113b7a5.wav",
     "static/media/DreamSquad_Demo.wav": "/static/media/DreamSquad_Demo.86d1bd4c3054061adfb6.wav",
@@ -37,10 +37,10 @@
     "static/media/mattel_logo.png": "/static/media/mattel_logo.fb03e2fdc14d740c74a1.png",
     "index.html": "/index.html",
     "main.9e09c599.css.map": "/static/css/main.9e09c599.css.map",
-    "main.42351dbb.js.map": "/static/js/main.42351dbb.js.map"
+    "main.2e158b4f.js.map": "/static/js/main.2e158b4f.js.map"
   },
   "entrypoints": [
     "static/css/main.9e09c599.css",
-    "static/js/main.42351dbb.js"
+    "static/js/main.2e158b4f.js"
   ]
 }

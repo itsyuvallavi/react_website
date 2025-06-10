@@ -14,7 +14,7 @@ import PrivateRoute from './components/PrivatePage/PrivateRoute'; // Route prote
 
 function App() {
   return (
-    <Router>
+    <Router basename="/react_website">
       <Routes>
         {/* Public routes */}
         <Route 
